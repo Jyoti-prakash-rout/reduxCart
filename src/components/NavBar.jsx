@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
-      <div style={{ display: "flex", alignItems: "space-between" }}>
+      <div className="flex items-center justify-between">
         <span className="logo">REDUX STORE</span>
         <div>
           <Link className="navLink" to="/">
@@ -21,5 +21,5 @@ const NavBar = () => {
     </>
   );
 };
- 
+
 export default NavBar;
