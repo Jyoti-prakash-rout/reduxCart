@@ -21,7 +21,7 @@ const Cart = () => {
           <Link to="/">Back to Home 🔙</Link>
         </div>
       </div>
-    );
+    ); 
   }
 
   return (
