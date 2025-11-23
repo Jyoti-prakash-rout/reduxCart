@@ -12,7 +12,7 @@ const Products = () => {
     fetchProducts();
   }, []);
   return (
-    <>
+    <>  
       <div className="productsWrapper">
         {products.map((product) => (
           <div key={product.id}>
