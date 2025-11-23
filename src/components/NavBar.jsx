@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const NavBar = () => {
+  const items = useSelector((state) => state.cart);
+
   return (
     <>
       <div className="flex items-center justify-between">
@@ -15,11 +18,11 @@ const NavBar = () => {
             {" "}
             Cart{" "}
           </Link>
-          <span className="">Cart items: 0</span>
+          <span className="">Cart items: {items.length} </span>
         </div>
-      </div>
+      </div> 
     </>
   );
-};
+}; 
 
 export default NavBar;

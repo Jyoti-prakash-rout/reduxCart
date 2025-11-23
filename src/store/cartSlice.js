@@ -13,7 +13,7 @@ const cartSlice = createSlice({
       state = state.filter((item) => item.id != action.payload);
     },
   },
-});
+}); 
 
 export const { add, remove } = cartSlice.actions;
 
