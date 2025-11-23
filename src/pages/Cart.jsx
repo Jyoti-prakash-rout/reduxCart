@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { remove } from "../store/cartSlice";
@@ -10,6 +11,18 @@ const Cart = () => {
   const handleReomve = (id) => {
     dispatch(remove(id));
   };
+
+  if (products.length === 0) {
+    return (
+      <div className="h-screen flex flex-col justify-center items-center">
+        <p className="font-bold">Your 🛒 is empty</p>
+        <div>
+          {" "}
+          <Link to="/">Back to Home 🔙</Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
